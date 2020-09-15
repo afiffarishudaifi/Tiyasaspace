@@ -55,11 +55,6 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-img.tengah {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -138,7 +133,7 @@ input, select, textarea {
 		font-weight: 400;
 		padding: 0;
 		font-size: 13pt;
-		color: rgba(255,255,0,0.3);
+		color: rgba(85,107,47);
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -186,8 +181,8 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: #fff;
-		color: rgba(255, 255, 255, 0.85);
+		color: ##ffff00;
+		color: rgba(255,255,0,1);
 		font-weight: 600;
 	}
 
