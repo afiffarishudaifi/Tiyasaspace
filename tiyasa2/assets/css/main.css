@@ -836,6 +836,20 @@ input, select, textarea {
 
 		}
 
+
+		.buton {
+			background-color: #6fa545;
+			/*border: none;*/
+    	color: #fff;      /* WHITE */
+    font-size: 16px;
+    padding: 1em 2em;
+    
+}
+ 
+.social-media-button:hover {
+    opacity: 0.9;
+}
+
 		.act-btn{
             background:green;
             display: block;
@@ -856,3 +870,4 @@ input, select, textarea {
 		}
 		
 		.act-btn:hover{background: blue}
+

@@ -11,6 +11,64 @@
     <script src="dist_files/jquery.form.js"></script>
     <link rel="stylesheet" href="dist_files/imgareaselect.css">
     <script src="functions.js"></script>
+    <style>
+    body {
+       background-repeat: no-repeat;
+       background-image: url("images/am.jpg");
+       background-position: vertical;
+       height: 100%;
+       width: 100%;
+      /* filter: blur(5px);
+       -webkit-filter: blur(5px);*/
+
+   }
+        #card {
+        background: #fbfbfb;
+        border-radius: 8px;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+        height: 480px;
+        margin: 6rem auto 8.1rem auto;
+        width: 329px;
+    }
+
+    #card-content {
+      padding: 12px 44px;
+}
+#card-title {
+      font-family: "Raleway Thin", sans-serif;
+      letter-spacing: 4px;
+      padding-bottom: 23px;
+      padding-top: 13px;
+      text-align: center;
+      position: center;
+}
+
+.container{
+    width:400px;
+    height:200px;
+    padding:20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -220px;
+}
+
+.box{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.underline-title {
+      background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+      height: 2px;
+      margin: -1.1rem auto 0 auto;
+      width: 89px;
+}
+
+
+    </style>
 
 </head>
 <script>
@@ -25,21 +83,20 @@
 </script>
 
 <body>
-    <h1>Form Upload Gambar</h1>
-    <a type="button" class="btn btn-primary" id="change-pic">Ganti Foto</a>
+    <div class="container">
+            <div class="box">
+    <h2 align="center">FORM UPLOAD GAMBAR</h2>
+    
     <br><br>
-    <!--<form method="post" enctype="multipart/form-data" action="">
-        <select name="TempatGambar">
-            <option value="Menu_Tiyasa-02">Snack</option>
-            <option value="Menu_Tiyasa-03">Food</option>
-            <option value="Menu_Tiyasa-04">Drink</option>
-            <option value="Menu_Tiyasa-05">Drink and Dessert</option>
-        </select>
-        <br>
-        <input type="file" name="gambar">
-        <input type="submit" value="Upload" name="submit">
-    </form>
--->
+
+    <a type="button" align="center" class="btn btn-primary" id="change-pic">Ganti Foto</a>
+    <br><br>
+    <a type="button" align="center" href="index.html"class="btn btn-primary" id="back">Kembali</a>
+    <br><br>
+    
+            </div>
+    </div>
+    
     <!--modal-->
     <div id="profile_pic_modal" class="modal fade">
         <div class="modal-dialog">
