@@ -181,7 +181,7 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: ##ffff00;
+		color: #ffff00;
 		color: rgba(255,255,0,1);
 		font-weight: 600;
 	}
@@ -315,7 +315,7 @@ input, select, textarea {
 
 	.scrollZone {
 		position: fixed;
-		width: 6rem;
+		width: 1rem;
 		height: 100vh;
 		cursor: -moz-grab;
 		cursor: -webkit-grab;
@@ -361,6 +361,7 @@ input, select, textarea {
 		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
 		padding: 5px;
+		margin-bottom: 25px;
 	}
 
 		#main .items {
@@ -617,6 +618,9 @@ input, select, textarea {
 	#footer {
 		width: 100%;
 		padding: 1.5em;
+		margin-left: 100px;
+		margin-right: 100px;
+		background:black;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -831,3 +835,24 @@ input, select, textarea {
 				}
 
 		}
+
+		.act-btn{
+            background:green;
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            right: 50px;
+            bottom:100px;
+		}
+		
+		.act-btn:hover{background: blue}
