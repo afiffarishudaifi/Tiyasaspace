@@ -28,7 +28,7 @@
     <h1>Form Upload Gambar</h1>
     <a type="button" class="btn btn-primary" id="change-pic">Ganti Foto</a>
     <br><br>
-    <form method="post" enctype="multipart/form-data" action="">
+    <!--<form method="post" enctype="multipart/form-data" action="">
         <select name="TempatGambar">
             <option value="Menu_Tiyasa-02">Snack</option>
             <option value="Menu_Tiyasa-03">Food</option>
@@ -39,7 +39,7 @@
         <input type="file" name="gambar">
         <input type="submit" value="Upload" name="submit">
     </form>
-
+-->
     <!--modal-->
     <div id="profile_pic_modal" class="modal fade">
         <div class="modal-dialog">
@@ -58,6 +58,7 @@
                             <option value="Menu_Tiyasa-05">Drink and Dessert</option>
                         </select>
                         <br><br>
+                        <input type="file" name="gambar" id="gambar" />
                         <input type="file" name="pic" id="pic" />
                         <input type="hidden" name="hdn-id" id="hdn-id" value="1" />
                         <input type="hidden" name="hdn-x1-axis" id="hdn-x1-axis" value="" />
@@ -75,7 +76,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                    <button type="button" id="save_crop" class="btn btn-primary">Crop &amp; Simpan</button>
+                    <button type="button" id="save_crop" name="submit" class="btn btn-primary">Crop &amp;
+                        Simpan</button>
                 </div>
             </div>
         </div>
@@ -84,36 +86,3 @@
 </body>
 
 </html>
-
-<?php
-// Load file koneksi.php
-//include "koneksi.php";
-// Ambil Data yang Dikirim dari Form
-if (isset($_POST['submit'])) {
-    $nama_file = $_POST['TempatGambar'] . ".jpg";
-    $ukuran_file = $_FILES['gambar']['size'];
-    $tipe_file = $_FILES['gambar']['type'];
-    $tmp_file = $_FILES['gambar']['tmp_name'];
-    // Set path folder tempat menyimpan gambarnya
-    $path = "./images/fulls/" . $nama_file;
-    if ($tipe_file == "image/jpeg" || $tipe_file == "image/png") { // Cek apakah tipe file yang diupload adalah JPG / JPEG / PNG
-        // Jika tipe file yang diupload JPG / JPEG / PNG, lakukan :
-        if ($ukuran_file <= 1000000) { // Cek apakah ukuran file yang diupload kurang dari sama dengan 1MB
-            // Jika ukuran file kurang dari sama dengan 1MB, lakukan :
-            // Proses upload
-
-            if (move_uploaded_file($tmp_file, $path)) { // Cek apakah gambar berhasil diupload atau tidak
-                echo "<script>alert('Data berhasil di tambahkan!');</script>";
-            } else {
-                // Jika gambar gagal diupload, Lakukan :
-                echo "<script>alert('Data gagal di tambahkan!');</script>";
-            }
-        } else {
-            // Jika ukuran file lebih dari 1MB, lakukan :
-            echo "<script>alert('Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB');</script>";
-        }
-    } else {
-        // Jika tipe file yang diupload bukan JPG / JPEG / PNG, lakukan :
-        echo "<script>alert('Maaf, Tipe gambar yang diupload harus JPG / JPEG / PNG.');</script>";
-    }
-}

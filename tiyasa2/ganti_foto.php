@@ -18,6 +18,28 @@ function changePic()
 	$valid_formats = array("jpg", "png", "gif", "bmp", "jpeg");
 	$name =	$_POST['TempatGambar'] . ".jpg";
 	$size = $_FILES['pic']['size'];
+
+	$nama_file = $_POST['TempatGambar'] . ".jpg";
+	$ukuran_file = $_FILES['gambar']['size'];
+	$tipe_file = $_FILES['gambar']['type'];
+	$tmp_file = $_FILES['gambar']['tmp_name'];
+	// Set path folder tempat menyimpan gambarnya
+	$path = "./images/fulls/" . $nama_file;
+	if ($ukuran_file <= 1000000) { // Cek apakah ukuran file yang diupload kurang dari sama dengan 1MB
+		// Jika ukuran file kurang dari sama dengan 1MB, lakukan :
+		// Proses upload
+
+		if (move_uploaded_file($tmp_file, $path)) { // Cek apakah gambar berhasil diupload atau tidak
+			echo "<script>alert('Data berhasil di tambahkan!');</script>";
+		} else {
+			// Jika gambar gagal diupload, Lakukan :
+			echo "<script>alert('Data gagal di tambahkan!');</script>";
+		}
+	} else {
+		// Jika ukuran file lebih dari 1MB, lakukan :
+		echo "<script>alert('Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB');</script>";
+	}
+
 	if (strlen($name)) {
 		list($txt, $ext) = explode(".", $name);
 		if (in_array($ext, $valid_formats)) {
@@ -75,6 +97,7 @@ function savePicTmp()
 		imagejpeg($nimg, $imagePath, 90);
 	}
 	echo $imagePath . '?' . time();;
+	echo "<script>alert('Data berhasil di tambahkan!');</script>";
 	exit(0);
 }
 /* Fungsi untuk mengubah ukuran gambar */
