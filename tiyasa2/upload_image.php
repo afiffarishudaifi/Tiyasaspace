@@ -13,16 +13,17 @@
     <script src="functions.js"></script>
     <style>
     body {
-       background-repeat: no-repeat;
-       background-image: url("images/am.jpg");
-       background-position: vertical;
-       height: 100%;
-       width: 100%;
-      /* filter: blur(5px);
+        background-repeat: no-repeat;
+        background-image: url("images/am.jpg");
+        background-position: vertical;
+        height: 100%;
+        width: 100%;
+        /* filter: blur(5px);
        -webkit-filter: blur(5px);*/
 
-   }
-        #card {
+    }
+
+    #card {
         background: #fbfbfb;
         border-radius: 8px;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
@@ -32,42 +33,41 @@
     }
 
     #card-content {
-      padding: 12px 44px;
-}
-#card-title {
-      font-family: "Raleway Thin", sans-serif;
-      letter-spacing: 4px;
-      padding-bottom: 23px;
-      padding-top: 13px;
-      text-align: center;
-      position: center;
-}
+        padding: 12px 44px;
+    }
 
-.container{
-    width:400px;
-    height:200px;
-    padding:20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -120px;
-    margin-left: -220px;
-}
+    #card-title {
+        font-family: "Raleway Thin", sans-serif;
+        letter-spacing: 4px;
+        padding-bottom: 23px;
+        padding-top: 13px;
+        text-align: center;
+        position: center;
+    }
 
-.box{
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+    .container {
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -120px;
+        margin-left: -220px;
+    }
 
-.underline-title {
-      background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
-      height: 2px;
-      margin: -1.1rem auto 0 auto;
-      width: 89px;
-}
+    .box {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
 
-
+    .underline-title {
+        background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+        height: 2px;
+        margin: -1.1rem auto 0 auto;
+        width: 89px;
+    }
     </style>
 
 </head>
@@ -84,19 +84,19 @@
 
 <body>
     <div class="container">
-            <div class="box">
-    <h2 align="center">FORM UPLOAD GAMBAR</h2>
-    
-    <br><br>
+        <div class="box">
+            <h2 align="center">FORM UPLOAD GAMBAR</h2>
 
-    <a type="button" align="center" class="btn btn-primary" id="change-pic">Ganti Foto</a>
-    <br><br>
-    <a type="button" align="center" href="index.html"class="btn btn-primary" id="back">Kembali</a>
-    <br><br>
-    
-            </div>
+            <br><br>
+
+            <a type="button" align="center" class="btn btn-primary" id="change-pic">Ganti Foto</a>
+            <br><br>
+            <a type="button" align="center" href="index.html" class="btn btn-primary" id="back">Kembali</a>
+            <br><br>
+
+        </div>
     </div>
-    
+
     <!--modal-->
     <div id="profile_pic_modal" class="modal fade">
         <div class="modal-dialog">
@@ -107,7 +107,7 @@
                 </div>
                 <div class="modal-body">
                     <form id="cropimage" method="post" enctype="multipart/form-data" action="ganti_foto.php">
-                        <strong>Upload gambar:</strong> <br><br>
+                        <strong>Lokasi gambar:</strong> <br><br>
                         <select name="TempatGambar">
                             <option value="Menu_Tiyasa-02">Snack</option>
                             <option value="Menu_Tiyasa-03">Food</option>
@@ -115,8 +115,8 @@
                             <option value="Menu_Tiyasa-05">Drink and Dessert</option>
                         </select>
                         <br><br>
-                        <input type="file" name="gambar" id="gambar" />
-                        <input type="file" name="pic" id="pic" />
+                        <h6>Gambar Full :</h6> <input type="file" name="gambar" id="gambar" />
+                        <h6>Gambar Cover :</h6><input type="file" name="pic" id="pic" />
                         <input type="hidden" name="hdn-id" id="hdn-id" value="1" />
                         <input type="hidden" name="hdn-x1-axis" id="hdn-x1-axis" value="" />
                         <input type="hidden" name="hdn-y1-axis" id="hdn-y1-axis" value="" />

@@ -102,7 +102,7 @@ function savePicTmp()
 		imagecopyresampled($nimg, $im_src, 0, 0, $x1, $y1, $nw, $nh, $w1, $h1);
 		imagejpeg($nimg, $imagePath, 90);
 	}
-	echo $imagePath . '?' . time();;
+	echo $imagePath . '?' . time();
 	echo "<script>alert('Data berhasil di tambahkan!');</script>";
 	exit(0);
 }

@@ -81,6 +81,8 @@ jQuery(document).ready(function () {
         jQuery("#profile_picture").attr("src", response);
         jQuery("#preview-pic").html("");
         jQuery("#pic").val();
+        alert("Gambar Berhasil Diperbarui");
+        window.location.href = "http://localhost/tiyasa/tiyasa2/";
       },
       error: function (xhr, ajaxOptions, thrownError) {
         alert("status Code:" + xhr.status + "Error Message :" + thrownError);
